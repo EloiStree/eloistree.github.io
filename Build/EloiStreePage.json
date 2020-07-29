@@ -1,0 +1,16 @@
+{
+"companyName": "Eloi Experiments",
+"productName": "Portfolio",
+"productVersion": "0.1",
+"dataUrl": "EloiStreePage.data.unityweb",
+"wasmCodeUrl": "EloiStreePage.wasm.code.unityweb",
+"wasmFrameworkUrl": "EloiStreePage.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#524F50",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.13f1"
+}
