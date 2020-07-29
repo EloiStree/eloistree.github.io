@@ -8,10 +8,19 @@
     <script src="websitegl/Build/UnityLoader.js"></script>
     <script>
       UnityLoader.instantiate("unityContainer", "websitegl/Build/WebsiteGl.json");
+      
+      var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+    eventer(messageEvent,function(e) {
+    console.log('parent received message!:  ',e.data);
+    document.getElementById('unityContainer').height = e.data + 'px';
+    },false);
     </script>
   </head>
   <body>
-    <div id="unityContainer" style="width: 100%; height: 500px; margin: auto"></div> 
+    <div id="unityContainer" style="width: 100px; height: 500px; margin: auto"></div> 
     <iframe src="https://embed.restream.io/player/index.html?token=220567f55a12003d0e934eb526747589" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
 
   </body>
