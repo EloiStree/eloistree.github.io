@@ -17,6 +17,10 @@
     console.log('parent received message!:  ',e.data);
     document.getElementById('unityContainer').width = e.data + 'px';
     },false);
+    eventer(messageEvent,function(e) {
+    console.log('parent received message!:  ',e.data);
+    document.getElementById('unityContainer').height = e.data + 'px';
+    },false);
     </script>
   </head>
   <body>
